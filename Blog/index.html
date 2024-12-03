@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Criativo Papelaria</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <style>
+        .back-to-top, .whatsapp-btn {
+            position: fixed;
+            bottom: 20px;
+            z-index: 999;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            color: white;
+            padding: 10px;
+            background-color: #007bff;
+            cursor: pointer;
+        }
+        .back-to-top { right: 20px; }
+        .whatsapp-btn { right: 80px; background-color: #25d366; }
+        footer {
+            background-color: #343a40;
+            color: white;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="75" tabindex="0">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">Blog Papelaria</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#dicas">Dicas</a></li>
+                <li class="nav-item"><a class="nav-link" href="#tutoriais">Tutoriais DIY</a></li>
+                <li class="nav-item"><a class="nav-link" href="#artigos">Artigos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Banner -->
+<header class="bg-light py-5 text-center">
+    <div class="container">
+        <h1 class="text-primary">Bem-vindo ao Blog da Papelaria</h1>
+        <p class="lead">Inspire-se com nossas dicas e tutoriais criativos</p>
+    </div>
+</header>
+
+<!-- Conteúdo -->
+<main>
+    <!-- Dicas -->
+    <section id="dicas" class="py-5 bg-light" data-aos="fade-up">
+        <div class="container">
+            <h2 class="text-primary mb-4">Dicas de Organização e Estudo</h2>
+            <p>Descubra maneiras criativas de organizar seus estudos e rotina.</p>
+            <ul>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=your_video_id" target="_blank" class="text-decoration-none text-primary">
+                        <i class="bi bi-youtube"></i> Assista: "Como organizar seu espaço de estudos"
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.artigoexemplo.com/dicas-organizacao" target="_blank" class="text-decoration-none text-primary">
+                        <i class="bi bi-journal-text"></i> Leia: "5 dicas práticas para organizar sua rotina"
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/sua_papelaria" target="_blank" class="text-decoration-none text-primary">
+                        <i class="bi bi-instagram"></i> Confira no Instagram: "Melhores planners do mês"
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Tutoriais DIY -->
+    <section id="tutoriais" class="py-5" data-aos="fade-up">
+        <div class="container">
+            <h2 class="text-primary mb-4">Tutoriais DIY</h2>
+            <p>Aprenda a criar projetos incríveis usando produtos da nossa papelaria.</p>
+            <ul>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=your_video_id" target="_blank" class="text-decoration-none text-primary">
+                        <i class="bi bi-youtube"></i> Assista: "Faça você mesmo: Caderno personalizado"
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.blogexemplo.com/diario-diy" target="_blank" class="text-decoration-none text-primary">
+                        <i class="bi bi-pencil-square"></i> Leia: "Diário criativo com materiais simples"
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Artigos -->
+    <section id="artigos" class="py-5 bg-light" data-aos="fade-up">
+        <div class="container">
+            <h2 class="text-primary mb-4">Artigos sobre Papelaria</h2>
+            <p>Explore informações úteis sobre materiais e ferramentas.</p>
+            <ul>
+                <li>
+                    <a href="https://www.blogexemplo.com/melhores-canetas" target="_blank" class="text-decoration-none text-primary">
+                        <i class="bi bi-journal"></i> Leia: "Melhores canetas para caligrafia artística"
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=your_video_id" target="_blank" class="text-decoration-none text-primary">
+                        <i class="bi bi-youtube"></i> Assista: "Tipos de papéis: Qual escolher?"
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="py-4">
+    <div class="container text-center">
+        <ul class="list-unstyled d-flex justify-content-center mb-3">
+            <li class="mx-3"><a href="#home">Início</a></li>
+            <li class="mx-3"><a href="#dicas">Dicas</a></li>
+            <li class="mx-3"><a href="#tutoriais">Tutoriais</a></li>
+            <li class="mx-3"><a href="#artigos">Artigos</a></li>
+        </ul>
+        <p>© 2024 Blog Papelaria. Todos os direitos reservados.</p>
+        <a href="#"><i class="bi bi-facebook mx-2"></i></a>
+        <a href="#"><i class="bi bi-instagram mx-2"></i></a>
+        <a href="#"><i class="bi bi-envelope mx-2"></i></a>
+    </div>
+</footer>
+
+<!-- Botões fixos -->
+<div class="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+    <i class="bi bi-arrow-up"></i>
+</div>
+<a href="https://wa.me/YOUR_NUMBER" class="whatsapp-btn" target="_blank">
+    <i class="bi bi-whatsapp"></i>
+</a>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+</body>
+</html>

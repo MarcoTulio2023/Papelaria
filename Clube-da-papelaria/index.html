@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clube de Papelaria</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- AOS Library -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="bg-light py-3">
+    <nav class="container d-flex justify-content-between align-items-center">
+      <a href="#" class="logo"><img src="logo.png" alt="Logo" width="120"></a>
+      <ul class="nav">
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Planos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Galeria</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Depoimentos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Área do Cliente</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+      </ul>
+      <button class="btn btn-primary" id="whatsappBtn"><i class="bi bi-whatsapp"></i> WhatsApp</button>
+    </nav>
+  </header>
+
+  <!-- Modal Login -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Login</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="loginForm">
+            <div class="mb-3">
+              <label for="email" class="form-label">E-mail</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="senha" class="form-label">Senha</label>
+              <input type="password" class="form-control" id="senha" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Entrar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+ <!-- PLANOS DE ASSINATURA -->
+<section id="planos" class="py-5">
+    <div class="container">
+      <h2 class="text-center">Nossos Planos de Assinatura</h2>
+      <div class="row mt-4">
+        <!-- Exemplo de card de plano -->
+        <div class="col-md-4">
+          <div class="card" data-aos="fade-up">
+            <img src="kit1.jpg" class="card-img-top" alt="Kit 1">
+            <div class="card-body">
+              <h5 class="card-title">Plano Mensal</h5>
+              <p class="card-text">Receba um kit de papelaria exclusivo todo mês.</p>
+              <!-- Botão para abrir o Modal de Detalhes do Kit -->
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detalhesKitModal">Assinar Agora</button>
+            </div>
+          </div>
+        </div>
+        <!-- Adicionar outros cards de planos aqui -->
+      </div>
+    </div>
+  </section>
+  
+  <!-- Modal Detalhes do Kit -->
+  <div class="modal fade" id="detalhesKitModal" tabindex="-1" aria-labelledby="detalhesKitModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="detalhesKitModalLabel">Detalhes do Kit</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h5>Kit de Janeiro</h5>
+          <img src="kit1.jpg" alt="Kit de Janeiro" class="img-fluid">
+          <p>Este kit inclui canetas coloridas, cadernos e outros materiais escolares exclusivos para o mês de Janeiro.</p>
+          <!-- Botão para abrir o Modal de Planos -->
+          <button class="btn btn-info" data-bs-toggle="modal" data-bs-target="#planosModal">Escolher Plano</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal Planos -->
+  <div class="modal fade" id="planosModal" tabindex="-1" aria-labelledby="planosModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="planosModalLabel">Escolha seu Plano</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h5>Plano Básico</h5>
+          <p>R$ 29,90 / mês - Receba 1 kit surpresa com materiais básicos de papelaria.</p>
+          <button class="btn btn-success">Assinar</button>
+          <hr>
+          <h5>Plano Premium</h5>
+          <p>R$ 59,90 / mês - Receba 2 kits surpresa com materiais personalizados e exclusivos.</p>
+          <button class="btn btn-success">Assinar</button>
+          <hr>
+          <h5>Plano Deluxe</h5>
+          <p>R$ 89,90 / mês - Receba 3 kits exclusivos e atendimento personalizado.</p>
+          <button class="btn btn-success">Assinar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+
+  <!-- GALERIA DE KITS PASSADOS -->
+<section id="galeria" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center">Galeria de Kits Passados</h2>
+      <div class="row mt-4" id="kitsGaleria">
+        <!-- A galeria será carregada aqui via AJAX -->
+      </div>
+    </div>
+  </section>
+  
+  <!-- DEPOIMENTOS DE CLIENTES -->
+<section id="depoimentos" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center">O que nossos clientes dizem</h2>
+      <div id="depoimentosCarousel" class="carousel slide mt-4" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-aos="fade-up">
+            <p class="text-center">"Adorei o meu kit! Chegou tudo direitinho e super bem organizado. Recomendo a todos!"</p>
+            <h5 class="text-center">Joana Silva</h5>
+          </div>
+          <div class="carousel-item" data-aos="fade-up">
+            <p class="text-center">"Os kits são incríveis! Todo mês, é uma surpresa maravilhosa. Vale a pena!"</p>
+            <h5 class="text-center">Carlos Souza</h5>
+          </div>
+          <!-- Adicionar outros depoimentos aqui -->
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#depoimentosCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#depoimentosCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
+  
+  
+  <!-- Painel de Controle do Cliente -->
+<section id="painelCliente" class="py-5">
+    <div class="container">
+      <h2 class="text-center">Painel de Controle</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Minhas Assinaturas</h5>
+              <p class="card-text">Confira seus planos e gerencie suas assinaturas.</p>
+              <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#planosModal">Ver Planos</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Informações Pessoais</h5>
+              <p class="card-text">Atualize seus dados pessoais.</p>
+              <a href="#" class="btn btn-primary">Alterar Dados</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Cancelar Assinatura</h5>
+              <p class="card-text">Caso queira cancelar sua assinatura.</p>
+              <button class="btn btn-danger">Cancelar Assinatura</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>  
+
+  <!-- RODAPÉ -->
+<footer class="bg-dark text-white py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h5>Localização</h5>
+          <!-- Google Maps Embed -->
+          <iframe src="https://www.google.com/maps/embed?pb=...your-embed-url..." width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <h5>Redes Sociais</h5>
+          <a href="https://wa.me/123456789" class="text-white me-3" target="_blank">
+            <i class="bi bi-whatsapp"></i> WhatsApp
+          </a>
+          <a href="https://instagram.com" class="text-white me-3" target="_blank">
+            <i class="bi bi-instagram"></i> Instagram
+          </a>
+          <a href="mailto:contato@empresa.com" class="text-white" target="_blank">
+            <i class="bi bi-envelope"></i> E-mail
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Botões -->
+  <div class="position-fixed bottom-0 end-0 mb-4 me-4">
+    <button class="btn btn-dark" onclick="window.scrollTo(0, 0)">
+      <i class="bi bi-arrow-up-circle"></i>
+    </button>
+    <a href="https://wa.me/123456789" class="btn btn-success mt-2" target="_blank">
+      <i class="bi bi-whatsapp"></i>
+    </a>
+  </div>
+  
+  
+  <!-- Incluindo o Google Maps API -->
+  <script async src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+  <!-- Scripts JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

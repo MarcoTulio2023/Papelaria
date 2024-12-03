@@ -1,0 +1,54 @@
+{
+    "produtos": [
+      {
+        "id": "1",
+        "nome": "Caderno Universitário",
+        "imagem": "https://via.placeholder.com/300x200?text=Caderno+Universitário",
+        "descricao": "Caderno universitário com capa dura e 200 páginas pautadas, ideal para suas anotações diárias."
+      },
+      {
+        "id": "2",
+        "nome": "Caneta Esferográfica Azul",
+        "imagem": "https://via.placeholder.com/300x200?text=Caneta+Azul",
+        "descricao": "Caneta esferográfica de alta qualidade, tinta azul durável e escrita suave."
+      },
+      {
+        "id": "3",
+        "nome": "Mochila Escolar",
+        "imagem": "https://via.placeholder.com/300x200?text=Mochila+Escolar",
+        "descricao": "Mochila escolar resistente com múltiplos compartimentos e design moderno."
+      }
+    ],
+    "kits": [
+      {
+        "titulo": "Kit de Janeiro",
+        "imagem": "https://via.placeholder.com/300x200?text=Kit+Janeiro",
+        "descricao": "Inclui canetas coloridas, cadernos e outros materiais exclusivos."
+      },
+      {
+        "titulo": "Kit de Fevereiro",
+        "imagem": "https://via.placeholder.com/300x200?text=Kit+Fevereiro",
+        "descricao": "Kit especial com adesivos, papeis personalizados e organizadores."
+      },
+      {
+        "titulo": "Kit de Março",
+        "imagem": "https://via.placeholder.com/300x200?text=Kit+Março",
+        "descricao": "Materiais escolares e decorativos para impulsionar sua criatividade."
+      }
+    ],
+    "depoimentos": [
+      {
+        "nome": "Maria Silva",
+        "texto": "Adoro os kits! Sempre recebo materiais incríveis e exclusivos."
+      },
+      {
+        "nome": "João Oliveira",
+        "texto": "Excelente catálogo interativo! Facilita muito na hora de escolher meus produtos."
+      },
+      {
+        "nome": "Ana Paula",
+        "texto": "A qualidade dos produtos é impecável. Recomendo a todos!"
+      }
+    ]
+  }
+  

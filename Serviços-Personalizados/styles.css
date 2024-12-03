@@ -1,0 +1,50 @@
+.fixed-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.fixed-button:hover {
+    background-color: #0056b3;
+}
+
+#backToTop i,
+#whatsappButton i {
+    font-size: 20px;
+}
+
+footer .social-icons {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    gap: 1.5rem; /* Espaçamento entre os ícones */
+    margin-bottom: 1.5rem; /* Espaçamento inferior */
+}
+
+footer a i {
+    color: white; /* Define a cor dos ícones como branca */
+    transition: color 0.3s ease; /* Adiciona uma transição suave */
+}
+
+footer a i:hover {
+    color: #ccc; /* Altera a cor ao passar o mouse */
+}
+
+#horario{
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1.25rem;
+}
+

@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/*Botões fixos*/
+.fixed-button {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.5s ease, box-shadow 0.5s ease;
+}
+
+#backToTop {
+    bottom: 20px;
+    left: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
+}
+
+#whatsappButton {
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    box-shadow: 0px 0px 10px rgba(0, 255, 0, 0.5); 
+    animation: pulse 2s infinite;
+}
+
+#whatsappButton i {
+    font-size: 24px;
+    color: #fff;
+}
+
+.fixed-button i {
+    font-size: 24px;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px rgba(0, 255, 0, 0.7);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    }
+}
+
+/* Garante que o menu fique acima de outros elementos */
+.navbar {
+    z-index: 1050; /* Aumenta a prioridade sobre outros elementos */
+}
+
+
+.header .header-content {
+    z-index: 1;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.header-content h1, .header-content p {
+    position: relative;
+}
+
+/* Garantindo espaçamento entre o header e a seção */
+#welcome {
+    padding: 40px 0;  /* Espaçamento interno (acima e abaixo) */
+    background-color: #f8f9fa; /* Cor de fundo leve para destacar */
+}
+
+#about {
+    background-color: #007BFF; /* Fundo cinza escuro */
+    color: #f8f9fa;         /* Texto claro */
+}
+
+#mission-vision-values .rounded {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+
+#mission-vision-values .rounded:hover {
+    transform: scale(1.05);
+}
+
+
+/* Botões fixos */
+.btn-to-top, .btn-whatsapp {
+    position: fixed;
+    z-index: 1000;
+    bottom: 20px;
+}
+
+.btn-to-top {
+    right: 70px;
+}
+
+.btn-whatsapp {
+    right: 20px;
+}

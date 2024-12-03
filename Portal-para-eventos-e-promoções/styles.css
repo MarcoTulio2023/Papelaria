@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  .hero-banner {
+    background: url('https://via.placeholder.com/1920x500') center/cover no-repeat;
+    height: 500px;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-banner h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  .btn-whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  #promoContainer .card {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  #promoContainer .card:hover {
+    transform: scale(1.05);
+  }
+
+  #newsletterForm button:hover {
+    background-color: #f8f9fa !important;
+    color: #007bff !important;
+  }
+
+  #newsletterFeedback {
+    font-size: 1.2rem;
+  }
+
+  #calendar {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .fc-event {
+    font-size: 1.1rem;
+    padding: 5px;
+  }
+  #coupons {
+    background-color: #f8f9fa;
+  }
+  #couponMessage {
+    font-size: 1.2rem;
+  }
+  .alert {
+    font-size: 1.1rem;
+    padding: 15px;
+  }
+
+  #newsletter {
+    background-color: #f8f9fa;
+  }
+  #newsletterMessage {
+    font-size: 1.2rem;
+  }
+  .alert {
+    font-size: 1.1rem;
+    padding: 15px;
+  }

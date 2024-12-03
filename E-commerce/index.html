@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu E-commerce</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Biblioteca AOS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- Estilos Personalizados -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand text-white" href="#">Minha Loja</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-white" href="#home">Início</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#offers">Ofertas</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#feedbacks">Feedbacks</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#contact">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner -->
+    <header id="home" class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4">Bem-vindo à nossa Loja!</h1>
+            <p class="lead">Aproveite nossas ofertas exclusivas.</p>
+            <a href="#products" class="btn btn-light">Ver Produtos</a>
+        </div>
+    </header>
+
+    <!-- Carrossel de Ofertas -->
+    <section id="offers" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Ofertas Especiais</h2>
+            <div id="offerCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://via.placeholder.com/800x300" class="d-block w-100" alt="Oferta 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://via.placeholder.com/800x300" class="d-block w-100" alt="Oferta 2">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#offerCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#offerCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedbacks -->
+    <section id="feedbacks" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">O que nossos clientes dizem</h2>
+            <div id="feedbackCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active text-center">
+                        <p>"Produtos de ótima qualidade!"</p>
+                        <h5>- Cliente 1</h5>
+                    </div>
+                    <div class="carousel-item text-center">
+                        <p>"Entrega rápida e eficiente."</p>
+                        <h5>- Cliente 2</h5>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#feedbackCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#feedbackCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Entre em Contato</h2>
+            <div class="row">
+                <div class="col-md-6" data-aos="fade-right">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">E-mail</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Mensagem</label>
+                            <textarea class="form-control" id="message" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                </div>
+                <div class="col-md-6" data-aos="fade-left">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Botões Flutuantes -->
+    <a href="#home" class="btn btn-primary position-fixed bottom-0 end-0 m-3">↑</a>
+    <a href="https://wa.me/5531999999999" class="btn btn-success position-fixed bottom-0 start-0 m-3">
+        <img src="whatsapp-icon.png" alt="WhatsApp">
+    </a>
+
+    <!-- Rodapé -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <ul class="list-unstyled d-flex justify-content-center mb-3">
+                <li class="mx-3"><a class="text-white" href="#home">Início</a></li>
+                <li class="mx-3"><a class="text-white" href="#offers">Ofertas</a></li>
+                <li class="mx-3"><a class="text-white" href="#feedbacks">Feedbacks</a></li>
+                <li class="mx-3"><a class="text-white" href="#contact">Contato</a></li>
+            </ul>
+            <p>© 2024 Minha Loja. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

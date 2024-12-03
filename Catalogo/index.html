@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catálogo Interativo - Papelaria</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Bootstrap Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+  
+  <!-- AOS CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  
+  <!-- CSS Personalizado -->
+  <link href="styles.css" rel="stylesheet">
+  
+  <!-- FullCalendar CSS (se necessário) -->
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
+  
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="75" tabindex="0">
+
+  <!-- Header -->
+  <header class="bg-primary text-white py-3 fixed-top">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a href="#" class="text-white text-decoration-none"><h1>Catálogo Papelaria</h1></a>
+      <nav>
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link text-white" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#categorias">Categorias</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#galeria">Galeria</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#depoimentos">Depoimentos</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-banner">
+    <div>
+      <h1>Bem-vindo ao Nosso Catálogo Interativo!</h1>
+      <p>Explore nossos produtos e encontre tudo para sua papelaria.</p>
+    </div>
+  </section>
+
+  <!-- Seção de Categorias -->
+  <section id="categorias" class="py-5">
+    <div class="container">
+      <h2 class="text-center">Categorias</h2>
+      <div class="row mt-4 text-center">
+        <div class="col-md-3 mb-4">
+          <i class="bi bi-journal-richtext display-4 text-primary"></i>
+          <h4>Cadernos</h4>
+        </div>
+        <div class="col-md-3 mb-4">
+          <i class="bi bi-pencil-square display-4 text-primary"></i>
+          <h4>Canetas</h4>
+        </div>
+        <div class="col-md-3 mb-4">
+          <i class="bi bi-bag-check display-4 text-primary"></i>
+          <h4>Mochilas</h4>
+        </div>
+        <div class="col-md-3 mb-4">
+          <i class="bi bi-clipboard-data display-4 text-primary"></i>
+          <h4>Materiais</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catálogo de Produtos -->
+  <section id="catalogo" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center">Nosso Catálogo</h2>
+      <div class="row mt-4" id="produtosContainer">
+        <!-- Produtos serão carregados aqui via AJAX -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Galeria de Kits Passados -->
+  <section id="galeria" class="py-5">
+    <div class="container">
+      <h2 class="text-center">Galeria de Kits Passados</h2>
+      <div class="row mt-4" id="kitsGaleria">
+        <!-- Galeria carregada via AJAX -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Depoimentos de Clientes -->
+  <section id="depoimentos" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center">O que dizem nossos clientes</h2>
+      <div id="depoimentosCarousel" class="carousel slide mt-4" data-bs-ride="carousel">
+        <div class="carousel-inner" id="depoimentosContainer">
+          <!-- Depoimentos carregados via AJAX -->
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#depoimentosCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#depoimentosCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Próximo</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+      <div class="row">
+        <!-- Menu de Links -->
+        <div class="col-md-4 mb-4">
+          <h5>Menu</h5>
+          <ul class="list-unstyled">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#categorias">Categorias</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#depoimentos">Depoimentos</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+        <!-- Localização no Google Maps -->
+        <div class="col-md-4 mb-4">
+          <h5>Localização</h5>
+          <div id="map"></div>
+        </div>
+        <!-- Redes Sociais -->
+        <div class="col-md-4 mb-4">
+          <h5>Redes Sociais</h5>
+          <a href="https://wa.me/SEU_NUMERO" class="text-white me-3" target="_blank">
+            <i class="bi bi-whatsapp"></i> WhatsApp
+          </a>
+          <a href="https://instagram.com" class="text-white me-3" target="_blank">
+            <i class="bi bi-instagram"></i> Instagram
+          </a>
+          <a href="mailto:contato@empresa.com" class="text-white" target="_blank">
+            <i class="bi bi-envelope"></i> E-mail
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botões Fixos -->
+  <div class="back-to-top btn btn-secondary">
+    <i class="bi bi-arrow-up-circle"></i>
+  </div>
+  <a href="https://wa.me/SEU_NUMERO" class="btn-whatsapp" target="_blank">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <!-- Modais -->
+  
+  <!-- Modal Detalhes do Produto -->
+  <div class="modal fade" id="detalhesProdutoModal" tabindex="-1" aria-labelledby="detalhesProdutoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="detalhesProdutoModalLabel">Detalhes do Produto</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Conteúdo do produto será carregado via AJAX -->
+          <div id="detalhesProdutoConteudo">
+            <!-- Exemplo de conteúdo -->
+            <h5>Nome do Produto</h5>
+            <img src="produto.jpg" alt="Produto" class="img-fluid mb-3">
+            <p>Descrição detalhada do produto.</p>
+            <button class="btn btn-primary">Contato via WhatsApp</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Scripts JS -->
+  <!-- jQuery (necessário para AJAX) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- AOS JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  
+  <!-- FullCalendar JS (se necessário) -->
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+  
+  <!-- Custom Script -->
+  <script src="script.js"></script>
+  
+  <script>
+    // Inicializar AOS
+    AOS.init();
+  </script>
+  <script src="scripts.js"></script>
+</body>
+</html>

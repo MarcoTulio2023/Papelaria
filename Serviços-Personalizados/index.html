@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços Personalizados</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body onload="verificarHorario()">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <div class="container">
+            <a class="navbar-brand text-white" href="#">Papelaria Serviços</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-white" href="#upload">Upload</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#prices">Calculadora de Preços</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#schedule">Agendamento</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#contact">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner -->
+    <header class="bg-light text-center py-5" data-aos="fade-up">
+        <div class="container">
+            <h1 class="text-primary">Serviços Personalizados de Papelaria</h1>
+            <p class="lead">Impressão, encadernação e muito mais!</p>
+        </div>
+        <!-- Horário de Funcionamento -->
+        <div class="container mt-5 " onload="verificarHorario()">
+            <h3 class="text-primary mb-4">Horário de Funcionamento</h3>
+            <p id="horario" class="lead"> Segunda a Sexta: 8h - 18h | Sábados: 8h - 12h</p>
+        </div>  
+    </header>
+
+    <!-- Upload de Arquivos -->
+    <section id="upload" class="py-5 bg-white">
+        <div class="container" data-aos="fade-right">
+            <h2 class="text-primary mb-4">Envie seus Arquivos</h2>
+            <form id="uploadForm">
+                <div class="mb-3">
+                    <label for="fileUpload" class="form-label">Selecione seu arquivo</label>
+                    <input type="file" class="form-control" id="fileUpload" required>
+                </div>
+                <button type="submit" class="btn btn-primary"><i class="bi bi-upload"></i> Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Calculadora de Preços -->
+    <section id="prices" class="py-5 bg-light">
+        <div class="container" data-aos="fade-left">
+            <h2 class="text-primary mb-4">Calculadora de Preços</h2>
+            <form id="priceCalculator">
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="serviceType" class="form-label">Tipo de Serviço</label>
+                        <select class="form-select" id="serviceType">
+                            <option value="print">Impressão</option>
+                            <option value="binding">Encadernação</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="quantity" class="form-label">Quantidade</label>
+                        <input type="number" class="form-control" id="quantity" placeholder="Ex.: 10" required>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-primary" id="calculatePrice"><i class="bi bi-calculator"></i> Calcular</button>
+            </form>
+            <div id="priceResult" class="mt-4 text-success"></div>
+        </div>
+    </section>
+
+    <!-- Agendamento -->
+    <section id="schedule" class="py-5 bg-white">
+        <div class="container" data-aos="fade-up">
+            <h2 class="text-primary mb-4">Agende sua Retirada ou Entrega</h2>
+            <form id="scheduleForm">
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="date" class="form-label">Data</label>
+                        <input type="date" class="form-control" id="date" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="time" class="form-label">Hora</label>
+                        <input type="time" class="form-control" id="time" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary"><i class="bi bi-calendar-check"></i> Agendar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container" data-aos="fade-up">
+            <div class="row">
+                <!-- Formulário de Contato -->
+                <div class="col-md-6">
+                    <h2 class="text-primary mb-4">Fale Conosco</h2>
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">E-mail</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Mensagem</label>
+                            <textarea class="form-control" id="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary"><i class="bi bi-envelope"></i> Enviar</button>
+                    </form>
+                </div>
+
+                <!-- Mapa de Localização -->
+                <div class="col-md-6">
+                    <h3 class="text-primary mb-4">Nosso Local</h3>
+                    <iframe 
+                        src="https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=Rua+Exemplo,+São+Paulo"
+                        width="100%" height="80%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Seção de Feedbacks -->
+    <div class="container mt-5">
+        <h3 class="text-primary mb-4 text-center" >Feedback dos Clientes</h3>
+        <div class="row">
+        <div class="col-md-6">
+            <p>"Ótimo atendimento e qualidade nos serviços!" - Cliente A</p>
+        </div>
+        <div class="col-md-6">
+            <p>"Adorei o trabalho personalizado que fiz, super recomendo!" - Cliente B</p>
+        </div>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="bg-primary text-white py-3">
+        <!-- Redes Sociais -->
+        <div class="container mt-5">
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="bi bi-facebook" style="font-size: 2rem;"></i></a>
+                <a href="#" target="_blank"><i class="bi bi-twitter" style="font-size: 2rem;"></i></a>
+                <a href="#" target="_blank"><i class="bi bi-instagram" style="font-size: 2rem;"></i></a>
+                <a href="#" target="_blank"><i class="bi bi-whatsapp" style="font-size: 2rem;"></i></a>
+            </div>
+        </div>
+        <div class="container text-center">
+            <ul class="list-unstyled d-flex justify-content-center mb-3">
+                <li class="mx-3"><a class="text-white" href="#home">Início</a></li>
+                <li class="mx-3"><a class="text-white" href="#offers">Ofertas</a></li>
+                <li class="mx-3"><a class="text-white" href="#feedbacks">Feedbacks</a></li>
+                <li class="mx-3"><a class="text-white" href="#contact">Contato</a></li>
+            </ul>
+            <p>© 2024 Papelaria. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>

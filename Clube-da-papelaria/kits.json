@@ -1,0 +1,30 @@
+{
+    "kits": [
+      {
+        "imagem": "kit1.jpg",
+        "titulo": "Kit de Janeiro",
+        "descricao": "Kit especial de Janeiro com canetas e cadernos exclusivos."
+      },
+      {
+        "imagem": "kit2.jpg",
+        "titulo": "Kit de Fevereiro",
+        "descricao": "Kit de Fevereiro com adesivos e papeis personalizados."
+      },
+      {
+        "imagem": "kit3.jpg",
+        "titulo": "Kit de Março",
+        "descricao": "Kit de Março com material escolar e decorativo."
+      }
+    ],
+    "depoimentos": [
+      {
+        "nome": "Maria Silva",
+        "depoimento": "Adoro os kits! Sempre recebo materiais incríveis e exclusivos."
+      },
+      {
+        "nome": "João Oliveira",
+        "depoimento": "Excelente clube de papelaria! Já sou assinante há 6 meses e estou muito satisfeito."
+      }
+    ]
+  }
+  
